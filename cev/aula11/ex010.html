@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multas</title>
+</head>
+<body>
+    <h1>Verificação de multas</h1>
+    <input type="number" placeholder="Velocidade" id="vel"> Km/h
+    <input type="button" value="Verificar" onclick="verificar()">
+    <p id="res"></p>
+
+    <script>
+        function verificar() {
+            var velocidade = document.querySelector('input#vel')
+            var res = document.querySelector('p#res')
+            var v1 = Number(velocidade.value)
+            alert(`Velocidade: ${v1} km/h`) 
+            if (v1 >= 120) {
+                res.innerHTML = ('Você foi <strong>multado!</strong>')
+            } else {
+                res.innerHTML = ('A velocidade está dentro dos limites!')
+            }
+        }
+    </script>
+</body>
+</html>
