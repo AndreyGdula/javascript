@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write</title>
+    <style>
+        body {
+            background-color: rgb(1, 55, 105);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3em;
+            margin: auto;
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = String(prompt('Digite seu nome:'))
+        document.writeln(`Olá, <strong>${nome.toUpperCase()}</strong>. Seu nome tem ${nome.length} letras`)
+
+        var sal = Number(prompt('Digite seu salário:'))
+        var sal1 = sal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        document.write('<br>Seu salário é:  ' + sal1)
+    </script>
+</body>
+</html>
