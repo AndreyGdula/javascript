@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="in1" id="in1"> +
+    <input type="number" name="in2" id="in2">
+    <input type="button" value="Calcular" onclick="somar()">
+    <p id="res"></p>
+
+    <script>
+        function somar() {
+            var in1 = document.getElementById("in1")
+            var in2 = document.getElementById("in2")
+            var res = document.getElementById("res")
+
+            var n1 = Number(in1.value)
+            var n2 = Number(in2.value)
+
+            var soma = n1 + n2
+            res.innerHTML = `O resultado da soma é: <strong>${soma}</strong>`
+        }
+    </script>
+</body>
+</html>
